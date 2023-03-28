@@ -1,7 +1,7 @@
 {
   "name": "live-cricket-app",
   "version": "1.0.0",
-  "description": "This is a live cricket score app.",
+  "description": "This is a live cricket app.",
   "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
