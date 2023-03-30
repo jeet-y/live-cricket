@@ -1,20 +1,15 @@
 import { useEffect, useState } from "react";
-import Matche from "./Match";
-import { GET_TOURNAMENT_FIXTURES } from "../constant";
-import useToken from '../utility/useToken'
+import { GET_BALL_BY_BALL_DETAILS } from "../constant";
 
-const MatchesList = () => {
-    let api_token = 'API_TOKEN=' + useToken();
-    let [matchList, setMatchList] = useState([]);
-
+const MatchDetails = () => {
+    let [matchDetail, setMatchDetail] = useState([]);
     async function getTournaments() {
         try {
-            let response = await fetch(GET_TOURNAMENT_FIXTURES, {
+            let response = await fetch(GET_TOKEN_URL, {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
                 method: 'POST',
-                body: api_token
             })
             let json = await response.json();
             return json;
@@ -27,12 +22,12 @@ const MatchesList = () => {
     useEffect(() => {
         let response = getTournaments();
         response.then((list) => {
-            setMatchList(list.data.matches)
+            // setMatchDetail(list.data.matches)
         })
     }, []);
 
     return (
-        (!matchList) ? <h3>Not Found!</h3> :
+        (!matchDetail) ? <h3>Not Found!</h3> :
             <div className="container margin-t1" >
                 <div className="width-75">
                     <div className="matchListHeading">
@@ -40,7 +35,7 @@ const MatchesList = () => {
                     </div>
                     <div className="matcheListContainer">
                         {
-                            matchList.map(match => <Matche {...match} />)
+                            // matchList.map(match => console.log(match))
                         }
                     </div>
                 </div>
@@ -48,4 +43,5 @@ const MatchesList = () => {
     )
 }
 
-export default MatchesList;
+
+export default MatchDetails;

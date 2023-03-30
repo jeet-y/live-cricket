@@ -4,24 +4,36 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    color:#1B1B1B
+}
+
+.font-color-blackOlive{
+    color:#3B3C36
+}
+
+.font-color-gray{
+    color:#808080
 }
 
 .font-sm{
-    font-size: 0.7rem;
+    font-size: 0.65rem;
 }
 
 .font-md{
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
-.font-lg{
+/* .font-lg{
     font-size: 1.15rem;
-}
+} */
 
 .font-xl{
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
+.font-xxl{
+    font-size: 1.2rem;
+}
 
 .upperCase{
     text-transform: uppercase;
@@ -33,10 +45,6 @@
 
 .bold{
     font-weight: bold;
-}
-
-.marginT{
-    margin-top: 30px;
 }
 
 .app{
@@ -85,18 +93,26 @@ header{
 }
 
 main{
-     width: 100%;
+    width: 100%;
     height: 100%;
     color:#080402;
 }
 
 .matchContainer{
-    width: 45%
+    padding:15px;
+    border-collapse: collapse;
+    border: 0.2px solid lightgray;
 }
 
-.matcheListContainer{
+.width-75{
+    width: 75%;
+    min-width: 800px;
+}
+
+.matchListHeading{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border: 0.2px solid lightgray;
-    border-radius: 10px;
 }
 
 .hr-line{
@@ -105,17 +121,29 @@ main{
     border-bottom: 0.2px solid lightgray;
     margin: 10px 0;
 }
-.font-lightGray{
-    color:gray;
-}
-.margin16{
-    margin: 16px;
+
+.matcheListContainer{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-.margin10{
-    margin: 10px;
+.margin-t1{
+    margin-top: 3rem;
 }
 
-.margin-T5{
-    margin-top: 5px;
+.margin-t2{
+    margin-top: 0.2rem;
+}
+
+.margin-ol1{
+    margin: 0.8rem;
+}
+
+.marginT-10{
+    margin-top: 1rem;
+}
+
+.marginTB-10{
+    margin: 10px 0;
 }

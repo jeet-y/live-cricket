@@ -7,7 +7,7 @@ const Header = () => {
             <div className="container flex flexHSpaceAround">
                 <div className="logo">CRICKET LIVE APP</div>
                 <div className="menu flex flexHSpaceBetween">
-                    <div>Live Score</div>
+                    <div className="font-xl">Live Scores</div>
                     <img className="userIcon" src={user} alt="user icon" />
                 </div>
             </div>
